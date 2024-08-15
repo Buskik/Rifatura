@@ -1,0 +1,114 @@
+
+.box {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    nav{
+        display: flex;
+        position: sticky;
+        flex: 0 1 5rem;
+        background-color: rgb(251, 245, 240);
+        padding: 0 2rem;
+        justify-content: space-between;
+        border-bottom: 0.1rem solid rgb(255, 218, 194);
+        align-items: center;
+        .logo {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            font-size: x-large;
+            color: orange;
+            border-radius: 0.5rem;
+            font-weight: 800;
+        }
+        .nav-links {
+            font-weight: 600;
+            color: orange;
+    
+        }
+    }
+    main{
+        display: flex;
+        flex: 1 1 auto;
+        aside {
+            flex: 0 1 auto;
+            display: flex;
+            padding: 2rem;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: left;
+            border-right: 0.1rem solid rgb(255, 218, 194);
+            background-color: rgb(251, 245, 240);
+            overflow: hidden;
+            align-items: center;
+            .rifa-img{
+                height: 10rem;
+                width: 10rem;
+                background-color: lightskyblue;
+                border-radius: 0.5rem;
+            }
+            button {
+                background-color: orange;
+                padding: 0.5rem 1rem;
+                width: min-content;
+                font-size: larger;
+                color: white;
+                font-weight: 600;
+                border-radius: 0.5rem;
+            }
+        }
+        section{
+            display: flex;
+            flex-flow: column;
+            flex: 1 1 auto;
+            .filter{
+                flex: 0 1 auto;
+                display: flex;
+                align-items: center;
+                height: 3rem;
+                border-bottom: 0.1rem solid rgb(231, 228, 228);
+                .search-num {
+                    margin: 1rem;
+                    flex: 1 1 auto;
+                    padding: 0.2rem 0.5rem;
+                    border:none;
+                    font-size: medium;
+                }
+                select {
+                    margin: 1rem;
+                    flex: 0 1 auto;
+                }
+                .checkbox{
+                    flex: 0 1 auto;
+                    display: flex;
+                    gap: 0.2rem;
+                }
+            }
+            .numbers{
+                flex: 1 1 auto;
+                overflow: auto;
+                color: white;
+            }
+            .num-container{
+                padding: 2rem;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+                max-height: 0;
+                .number-box{
+                    font-weight: 900;
+                    padding: 5rem;
+                    border-radius: 1rem;
+                    background-color: rgb(255, 90, 90);
+                }
+            }
+        }
+        
+    }
+}
+

@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule, NgFor } from "@angular/common";
+import { Component } from "@angular/core";
+import { RouterOutlet } from "@angular/router";
+import data from "../data.json";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.less'
+	selector: "app-root",
+	standalone: true,
+	imports: [RouterOutlet, NgFor, CommonModule],
+	templateUrl: "./app.component.html",
+	styleUrl: "./app.component.less",
 })
 export class AppComponent {
-  title = 'rifatura';
+	numbers = data.numbers.map((e) => e);
 }
