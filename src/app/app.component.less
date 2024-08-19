@@ -67,7 +67,7 @@
                 flex: 0 1 auto;
                 display: flex;
                 align-items: center;
-                height: 3rem;
+                height: 3.5rem;
                 border-bottom: 0.1rem solid rgb(231, 228, 228);
                 .search-num {
                     margin: 1rem;
@@ -78,7 +78,22 @@
                 }
                 select {
                     margin: 1rem;
+                    outline: none;
+                    padding: 0.25rem;
+                    font-size: medium;
+
+                    font-weight: 600;
+                    border-radius: 0.5rem;
+                    background-color: rgb(251, 245, 240);
+                    border: 0.1rem solid rgb(255, 218, 194);
+
+                    color: orange;
                     flex: 0 1 auto;
+                    option{
+                        color: black;
+                        border-radius: 0;
+                        background-color: white;
+                    }
                 }
                 .checkbox{
                     flex: 0 1 auto;
@@ -104,6 +119,8 @@
                     font-weight: 900;
                     padding: 5rem;
                     border-radius: 1rem;
+                    margin-block-start: 0;
+                    margin-block-end: 0;
                     background-color: rgb(255, 90, 90);
                 }
             }

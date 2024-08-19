@@ -16,24 +16,29 @@
 </aside>
 <section>
   <div class="filter">
-    <input placeholder="Buscar" class="search-num">
-    <div class="checkbox">
-      <input value="available" name="available" type="checkbox">
+    <input (keyup)="filterNum(input, checkbox, select)" placeholder="Buscar" class="search-num" #input>
+    <div class="checkbox" >
+      <input (change)="filterNum(input, checkbox, select)" value="available" name="available" type="checkbox" #checkbox>
       <span>Disponível</span>
     </div>
     
-    <select name="order">
+    <select (change)="filterNum(input, checkbox, select)" name="order" #select>
       <option value="asc">Ascendente</option>
       <option value="desc">Descendente</option>
     </select>
   </div>
   <div class="numbers">
     <div  class="num-container">
-      <div *ngFor="let num of numbers;" >
-        <h1 *ngIf="num.owner === '' else available" class="number-box">{{num.id}}</h1>
-        <ng-template #available>
+      @for(num of filteredNum(); track num){
+        @if(!num.owner){
+          <h1 class="number-box">{{num.id}}</h1>
+        }@else {
           <h1 class="number-box" style="background-color: rgb(97, 208, 97);">{{num.id}}</h1>
-        </ng-template></div>
+        }
+
+      }
+
+        
     </div>
    
   </div>
