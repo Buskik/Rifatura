@@ -30,7 +30,7 @@
   <div class="numbers">
     <div  class="num-container">
       @for(num of filteredNum(); track num){
-        @if(!num.owner){
+        @if(num.owner){
           <h1 class="number-box">{{num.id}}</h1>
         }@else {
           <h1 class="number-box" style="background-color: rgb(97, 208, 97);">{{num.id}}</h1>
