@@ -1,10 +1,13 @@
 import { Component, signal } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
+import { LogoComponent } from "./components/logo/logo.component";
+import { NavLinksComponent } from "./components/nav-links/nav-links.component";
+import { SidePanelComponent } from "./components/side-panel/side-panel.component";
 
 @Component({
 	selector: "app-root",
 	standalone: true,
-	imports: [RouterOutlet],
+	imports: [RouterOutlet, NavLinksComponent, LogoComponent, SidePanelComponent],
 	templateUrl: "./app.component.html",
 	styleUrl: "./app.component.less",
 })
@@ -25,6 +28,8 @@ export class AppComponent {
 		return data;
 	}
 	data = this.getData();
+
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	numbers = this.data.map((e) => e).sort((a: any, b: any) => a.id - b.id);
 	filteredNum = signal(this.numbers);
 	filterNum(

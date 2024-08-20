@@ -1,19 +1,11 @@
 
 <div class="box">
 <nav>
-  <div class="logo">Rifatura</div>
-  <div class="nav-links">
-    <span>Login</span>
-  </div>
+  <app-logo></app-logo>
+  <app-nav-links></app-nav-links>
 </nav>
 <main>
-<aside>
-  <div class="rifa-img"></div>
-  <h1>Nome da rifa</h1>
-  <p>Descrição da rifa</p>
-  <h2>R$ 15,00</h2>
-  <button>Comprar</button>
-</aside>
+  <app-side-panel></app-side-panel>
 <section>
   <div class="filter">
     <input (keyup)="filterNum(input, checkbox, select)" placeholder="Buscar" class="search-num" #input>
